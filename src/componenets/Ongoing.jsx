@@ -64,11 +64,21 @@ const Ongoing = () => {
     );
   };
 
+  const handleSubmit = () => {
+     window.open("https://recommendation-system-hjal.onrender.com/","_blank");
+  };
+
   return (
     <div className="relative top-8">
-      <h2 className="text-center text-3xl font-semibold mb-4">
-        Ongoing Projects
-      </h2>
+      <div className="flex  mb-4">
+        <h2 className=" mx-4  text-3xl font-semibold">Ongoing Projects</h2>
+        <button
+          onClick={handleSubmit}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          AI Recommendation✨
+        </button>
+      </div>
       <div className="flex justify-center space-x-4 overflow-hidden">
         {projects.slice(currentIndex, currentIndex + 4).map((project) => (
           <div
